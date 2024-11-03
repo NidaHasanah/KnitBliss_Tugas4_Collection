@@ -1,0 +1,270 @@
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style:none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Georgia;
+    background-color:#ffe0f7;
+}
+
+nav{
+   background: #feffd9;
+   height:80px;
+   width:100%;
+}
+
+.logo {
+    width: 80%; /* Gambar akan mengisi lebar kontainer */
+    max-width: 100px; /* Membatasi ukuran maksimum */
+    height: auto; /* Menjaga rasio aspek gambar */
+    margin-left: 10px;
+ }
+ 
+ .logo img {
+    height: 70px; /* Atur ukuran logo */
+    width: auto;
+    padding-top: 10px;
+    
+ }
+
+nav ul{
+    float: right;
+    margin-right: 20px;
+}
+
+nav ul li{
+    display:inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+nav ul li a{
+    color: #f71dbd;
+    font-size: 17px;
+    padding: 3px 20px;
+    border-radius: 8px;
+    
+}
+
+a.active, a:hover{
+    background:#fffa9d;
+    transition: .5s;
+}
+ #check {
+    display: none;
+ }
+
+.checkbtn{
+    font-size: 30px;
+    color:#f71dbd;
+    float: left;
+    line-height: 80px;
+    margin-left: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+@media (max-width: 952px){
+    label.logo{
+      font-size: 30px;
+      padding-left: 50px;
+    }
+    nav ul li a{
+      font-size: 16px;
+    }
+  }
+  
+  @media (max-width: 858px){
+    .checkbtn{
+      display: block;
+    }
+    ul{
+      position: fixed;
+      width: 100%;
+      height: 100vh;
+      background: #fffa9d;
+      top: 80px;
+      left: -100%;
+      text-align: center;
+      transition: all 0,5s;
+    }
+    nav ul li{
+      display: block;
+      margin: 50px 0;
+      line-height: 30px;
+    }
+    nav ul li a{
+      font-size: 20px;
+    }
+    a:hover, a.active{
+      background: none;
+      color: #f889dae2;
+    }
+    #check:checked ~ ul{
+      left: 0;
+    }
+  
+  section{
+      background-size: cover;
+      height: calc(100vh - 80px);
+    }
+  }
+
+  .blink {
+    text-align: left;
+    margin-top: 30px;
+    margin-left: 145px;
+    animation: blink-animation 1s steps(5, start) infinite;
+    color:#f71dbd;
+    letter-spacing: 5px; /* Jarak antar huruf */
+            
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+
+.card-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 25px;
+    margin-top: 60px;
+}
+
+.card{
+    width: 225px;
+    height: 350px;
+    background-color: #fffa9d;
+    border: 5px solid #feffd7;
+    border-radius: 10px;
+    box-shadow: 0px 2px 4px #f71dbd;
+    overflow : hidden ;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover{
+    transform: translateY(-20px);
+    box-shadow: 0 10px 15px rgba(255, 215, 57, 0.8);
+}
+
+.card img{
+    width: 100%;
+    height: 75%;
+    object-fit: cover;
+}
+
+.card-content{
+    padding: 5px;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+.card-content h1{
+    font-size: 17px;
+    margin-bottom: 10px;
+    text-align: center;
+    color:#f71dbd;
+}
+
+.card-button{
+    display: inline-block;
+    background-color:#f71dbd;
+    color:white;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 7px 10px;
+    font-size: small;
+    align-items: center;
+}
+.card-button:hover{
+    background-color: #c50c93;
+}
+
+.card{
+    outline: 5px double rgb(234, 236, 118);
+}
+
+
+.outline {
+    color:#f71dbd;
+    outline-style: dashed;
+    text-align: center;
+    background-color: #feffd7;
+    margin-top: 10px;
+}
+
+
+
+  .footer{
+    background-color: #fffa9d;
+}
+.footercontainer{
+    width: 100%;
+    padding: 70px 30px 20px ;
+}
+.socialIcons{
+    display: flex;
+    justify-content: center;
+}
+.socialIcons a{
+    text-decoration: none;
+    padding:  10px;
+    background-color: white;
+    margin: 10px;
+    border-radius: 50%;
+}
+.socialIcons a i{
+    font-size: 2em;
+    color: #f71dbd;
+    opacity: 0,9;
+}
+/* Hover affect on social media icon */
+.socialIcons a:hover{
+    background-color: #f71dbd;
+    transition: 0.5s;
+}
+.socialIcons a:hover i{
+    color: white;
+    transition: 0.5s;
+}
+.footerNav{
+    margin: 30px 0;
+}
+.footerNav ul{
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+}
+.footerNav ul li a{
+    color:white;
+    margin: 20px;
+    text-decoration: none;
+    font-size: 1.3em;
+    opacity: 0.7;
+    transition: 0.5s;
+
+}
+.footerNav ul li a:hover{
+    opacity: 1;
+}
+.footerBottom{
+    background-color: #feffd9;
+    padding: 20px;
+    text-align: center;
+}
+.footerBottom p{
+    color: #f71dbd;
+}
+.designer{
+    opacity: 0.7;
+    letter-spacing: 1px;
+    font-weight: 400;
+    margin: 0px 5px;
+}
